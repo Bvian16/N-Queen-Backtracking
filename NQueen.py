@@ -1,5 +1,5 @@
 global N 
-N = 4
+N = int(input())
 
 def printSolution(board): 
 	for i in range(N): 
@@ -39,10 +39,7 @@ def solveNQUtil(board, col):
 	return False
 
 def NQueen(): 
-	board = [ [0, 0, 0, 0], 
-			[0, 0, 0, 0], 
-			[0, 0, 0, 0], 
-			[0, 0, 0, 0] ] 
+	board = [ [0 for i in range(N)] for j in range(N) ] 
 
 	if solveNQUtil(board, 0) == False: 
 		print ("no solution found") 
